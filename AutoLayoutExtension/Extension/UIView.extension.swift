@@ -46,17 +46,14 @@ extension AutoLayoutExtension where Base: UIView {
         let centerX = view.centerXAnchor.constraint(equalTo: base.centerXAnchor, constant: point.x)
         let centerY = view.centerYAnchor.constraint(equalTo: base.centerYAnchor, constant: point.y)
 
-        NSLayoutConstraint.activate([centerX, centerY])
-
         var width: NSLayoutConstraint?
         var height: NSLayoutConstraint?
         if let size = size {
-            let w = view.widthAnchor.constraint(equalToConstant: size.width)
-            let h = view.heightAnchor.constraint(equalToConstant: size.height)
-            NSLayoutConstraint.activate([w, h])
-            width = w
-            height = h
+            width = view.widthAnchor.constraint(equalToConstant: size.width)
+            height = view.heightAnchor.constraint(equalToConstant: size.height)
         }
+
+        NSLayoutConstraint.activate([centerX, centerY, width, height].flatMap { $0 })
 
         return (centerX: centerX, centerY: centerY, width: width, height: height)
     }
