@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE8C0A5E1EE12E54006C6118 /* AutoLayoutExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8C0A5C1EE12E54006C6118 /* AutoLayoutExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE8C0A691EE12E70006C6118 /* Array.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0A651EE12E70006C6118 /* Array.extension.swift */; };
 		FE8C0A6A1EE12E70006C6118 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0A661EE12E70006C6118 /* Extension.swift */; };
 		FE8C0A6B1EE12E70006C6118 /* NSLayoutConstraint.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0A671EE12E70006C6118 /* NSLayoutConstraint.extension.swift */; };
 		FE8C0A6C1EE12E70006C6118 /* UIView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0A681EE12E70006C6118 /* UIView.extension.swift */; };
@@ -33,7 +32,6 @@
 		FE8C0A591EE12E54006C6118 /* AutoLayoutExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLayoutExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE8C0A5C1EE12E54006C6118 /* AutoLayoutExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutExtension.h; sourceTree = "<group>"; };
 		FE8C0A5D1EE12E54006C6118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE8C0A651EE12E70006C6118 /* Array.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.extension.swift; sourceTree = "<group>"; };
 		FE8C0A661EE12E70006C6118 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FE8C0A671EE12E70006C6118 /* NSLayoutConstraint.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.extension.swift; sourceTree = "<group>"; };
 		FE8C0A681EE12E70006C6118 /* UIView.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.extension.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		FE8C0A641EE12E70006C6118 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FE8C0A651EE12E70006C6118 /* Array.extension.swift */,
 				FE8C0A661EE12E70006C6118 /* Extension.swift */,
 				FE8C0A671EE12E70006C6118 /* NSLayoutConstraint.extension.swift */,
 				FE8C0A681EE12E70006C6118 /* UIView.extension.swift */,
@@ -232,7 +229,6 @@
 			files = (
 				FE8C0A6B1EE12E70006C6118 /* NSLayoutConstraint.extension.swift in Sources */,
 				FE8C0A6C1EE12E70006C6118 /* UIView.extension.swift in Sources */,
-				FE8C0A691EE12E70006C6118 /* Array.extension.swift in Sources */,
 				FE8C0A6A1EE12E70006C6118 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

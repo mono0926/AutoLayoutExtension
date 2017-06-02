@@ -34,7 +34,7 @@ extension AutoLayoutExtension where Base: UIView {
         let bottom = view.bottomAnchor.constraint(equalTo: base.bottomAnchor, constant: -insets.bottom)
         let right = view.rightAnchor.constraint(equalTo: base.rightAnchor, constant: -insets.right)
 
-        [top, left, bottom, right].activate()
+        NSLayoutConstraint.activate([top, left, bottom, right])
 
         return (top: top, left: left, bottom: bottom, right: right)
     }
@@ -46,14 +46,17 @@ extension AutoLayoutExtension where Base: UIView {
         let centerX = view.centerXAnchor.constraint(equalTo: base.centerXAnchor, constant: point.x)
         let centerY = view.centerYAnchor.constraint(equalTo: base.centerYAnchor, constant: point.y)
 
+        NSLayoutConstraint.activate([centerX, centerY])
+
         var width: NSLayoutConstraint?
         var height: NSLayoutConstraint?
         if let size = size {
-            width = view.widthAnchor.constraint(equalToConstant: size.width)
-            height = view.heightAnchor.constraint(equalToConstant: size.height)
+            let w = view.widthAnchor.constraint(equalToConstant: size.width)
+            let h = view.heightAnchor.constraint(equalToConstant: size.height)
+            NSLayoutConstraint.activate([w, h])
+            width = w
+            height = h
         }
-
-        [centerX, centerY, width, height].activate()
 
         return (centerX: centerX, centerY: centerY, width: width, height: height)
     }
