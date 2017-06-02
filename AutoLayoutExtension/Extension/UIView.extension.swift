@@ -63,7 +63,7 @@ extension AutoLayoutExtension where Base: UIView {
 
     public func addAutoLayoutedSubview(_ view: UIView, constraints: [NSLayoutConstraint]) {
         addAutoLayoutedSubview(view)
-        constraints.forEach { $0.ale.activate() }
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func addAutoLayoutedSubview(_ view: UIView) {
