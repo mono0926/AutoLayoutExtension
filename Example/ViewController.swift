@@ -12,6 +12,7 @@ import AutoLayoutExtension
 class ViewController: UIViewController {
     let labelFilled = UILabel()
     let buttonFilled = UIButton(type: UIButtonType.system)
+    let buttonToggleActive = UIButton(type: UIButtonType.system)
     let viewFilledOuter = UIView()
     let viewFilledInner = UIView()
     var viewFilledInnerConstrains: FilledResult!
@@ -45,11 +46,18 @@ class ViewController: UIViewController {
             ])
         buttonFilled.addTarget(self, action: #selector(moveRightDidTap(_:)), for: .touchUpInside)
 
+        buttonToggleActive.setTitle("Activate/Deactivate inner right", for: .normal)
+        view.ale.addAutoLayoutedSubview(buttonToggleActive, constraints: [
+            buttonToggleActive.leftAnchor.constraint(equalTo: view.leftAnchor),
+            buttonToggleActive.topAnchor.constraint(equalTo: buttonFilled.bottomAnchor)
+            ])
+        buttonToggleActive.addTarget(self, action: #selector(toggleActiveDidTap(_:)), for: .touchUpInside)
+
         // Centered:
         labelCentered.text = "Centered:"
         view.ale.addAutoLayoutedSubview(labelCentered, constraints: [
             labelCentered.leftAnchor.constraint(equalTo: view.leftAnchor),
-            labelCentered.topAnchor.constraint(equalTo: buttonFilled.bottomAnchor, constant: 20)
+            labelCentered.topAnchor.constraint(equalTo: buttonToggleActive.bottomAnchor, constant: 20)
             ])
         viewCenteredOuter.backgroundColor = .black
         view.ale.addAutoLayoutedSubview(viewCenteredOuter, constraints: [
@@ -76,6 +84,11 @@ class ViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }
         }
+    }
+    func toggleActiveDidTap(_ sender: UIButton) {
+        let target = viewFilledInnerConstrains.right
+        target.isActive = !target.isActive
+        self.view.layoutIfNeeded()
     }
 }
 
