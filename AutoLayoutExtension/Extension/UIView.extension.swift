@@ -34,7 +34,7 @@ extension AutoLayoutExtension where Base: UIView {
         let bottom = view.bottomAnchor.constraint(equalTo: base.bottomAnchor, constant: -insets.bottom)
         let right = view.rightAnchor.constraint(equalTo: base.rightAnchor, constant: -insets.right)
 
-        NSLayoutConstraint.activate([top, left, bottom, right])
+        [top, left, bottom, right].activate()
 
         return (top: top, left: left, bottom: bottom, right: right)
     }
@@ -53,14 +53,14 @@ extension AutoLayoutExtension where Base: UIView {
             height = view.heightAnchor.constraint(equalToConstant: size.height)
         }
 
-        NSLayoutConstraint.activate([centerX, centerY, width, height].flatMap { $0 })
+        [centerX, centerY, width, height].flatMap { $0 }.activate()
 
         return (centerX: centerX, centerY: centerY, width: width, height: height)
     }
 
     public func addAutoLayoutedSubview(_ view: UIView, constraints: [NSLayoutConstraint]) {
         addAutoLayoutedSubview(view)
-        NSLayoutConstraint.activate(constraints)
+        constraints.activate()
     }
 
     private func addAutoLayoutedSubview(_ view: UIView) {
