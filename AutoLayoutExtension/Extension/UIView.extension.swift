@@ -75,4 +75,12 @@ extension AutoLayoutExtension where Base: UIView {
             return base.layoutMarginsGuide
         }
     }
+
+    public var safeAreaInsetsOrZero: UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return base.safeAreaInsets
+        } else {
+            return .zero
+        }
+    }
 }
