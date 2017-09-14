@@ -76,3 +76,19 @@ extension AutoLayoutExtension where Base: UIView {
         }
     }
 }
+
+extension UIView {
+    public static let standardSpacing: CGFloat = 8
+
+    public static func additionalCGFloatForUnderIOS11(_ value: CGFloat) -> CGFloat {
+        if #available(iOS 11.0, *) {
+            return 0
+        } else {
+            return value
+        }
+    }
+
+    public static func standardSpacingForUnderIOS11() -> CGFloat {
+        return additionalCGFloatForUnderIOS11(standardSpacing)
+    }
+}
