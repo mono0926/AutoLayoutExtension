@@ -8,10 +8,16 @@
 
 import Foundation
 
+public let standardSpacing: CGFloat = 8
+
 public func additionalCGFloatForUnderIOS11(_ value: CGFloat) -> CGFloat {
     if #available(iOS 11.0, *) {
         return 0
     } else {
         return value
     }
+}
+
+public func standardSpacingForUnderIOS11() -> CGFloat {
+    return additionalCGFloatForUnderIOS11(standardSpacing)
 }
