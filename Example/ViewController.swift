@@ -26,13 +26,13 @@ class ViewController: UIViewController {
         // Filled
         labelFilled.text = "Filled:"
         view.ale.addAutoLayoutedSubview(labelFilled, constraints: [
-            labelFilled.leftAnchor.constraint(equalTo: view.leftAnchor),
-            labelFilled.topAnchor.constraint(equalTo: view.topAnchor, constant: 20)
+            labelFilled.leftAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.leftAnchor),
+            labelFilled.topAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.topAnchor, constant: 20)
             ])
         viewFilledOuter.backgroundColor = .black
         view.ale.addAutoLayoutedSubview(viewFilledOuter, constraints: [
             viewFilledOuter.topAnchor.constraint(equalTo: labelFilled.bottomAnchor, constant: 10),
-            viewFilledOuter.leftAnchor.constraint(equalTo: view.leftAnchor),
+            viewFilledOuter.leftAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.leftAnchor),
             viewFilledOuter.widthAnchor.constraint(equalToConstant: 100),
             viewFilledOuter.heightAnchor.constraint(equalToConstant: 100),
             ])
@@ -41,14 +41,14 @@ class ViewController: UIViewController {
                                              insets: UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16))
         buttonFilled.setTitle("Move to right", for: .normal)
         view.ale.addAutoLayoutedSubview(buttonFilled, constraints: [
-            buttonFilled.leftAnchor.constraint(equalTo: view.leftAnchor),
+            buttonFilled.leftAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.leftAnchor),
             buttonFilled.topAnchor.constraint(equalTo: viewFilledOuter.bottomAnchor)
             ])
         buttonFilled.addTarget(self, action: #selector(moveRightDidTap(_:)), for: .touchUpInside)
 
         buttonToggleActive.setTitle("Activate/Deactivate inner right", for: .normal)
         view.ale.addAutoLayoutedSubview(buttonToggleActive, constraints: [
-            buttonToggleActive.leftAnchor.constraint(equalTo: view.leftAnchor),
+            buttonToggleActive.leftAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.leftAnchor),
             buttonToggleActive.topAnchor.constraint(equalTo: buttonFilled.bottomAnchor)
             ])
         buttonToggleActive.addTarget(self, action: #selector(toggleActiveDidTap(_:)), for: .touchUpInside)
@@ -56,13 +56,13 @@ class ViewController: UIViewController {
         // Centered:
         labelCentered.text = "Centered:"
         view.ale.addAutoLayoutedSubview(labelCentered, constraints: [
-            labelCentered.leftAnchor.constraint(equalTo: view.leftAnchor),
+            labelCentered.leftAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.leftAnchor),
             labelCentered.topAnchor.constraint(equalTo: buttonToggleActive.bottomAnchor, constant: 20)
             ])
         viewCenteredOuter.backgroundColor = .black
         view.ale.addAutoLayoutedSubview(viewCenteredOuter, constraints: [
             viewCenteredOuter.topAnchor.constraint(equalTo: labelCentered.bottomAnchor, constant: 10),
-            viewCenteredOuter.leftAnchor.constraint(equalTo: view.leftAnchor),
+            viewCenteredOuter.leftAnchor.constraint(equalTo: view.ale.safeAreaLayoutGuide.leftAnchor),
             viewCenteredOuter.widthAnchor.constraint(equalToConstant: 100),
             viewCenteredOuter.heightAnchor.constraint(equalToConstant: 100),
             ])
