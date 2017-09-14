@@ -67,4 +67,12 @@ extension AutoLayoutExtension where Base: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         base.addSubview(view)
     }
+
+    public var safeAreaLayoutGuide: UILayoutGuide {
+        if #available(iOS 11.0, *) {
+            return base.safeAreaLayoutGuide
+        } else {
+            return base.layoutMarginsGuide
+        }
+    }
 }
