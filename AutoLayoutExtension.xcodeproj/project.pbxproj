@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2ED0611F6A7B2E0036A620 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2ED0601F6A7B2E0036A620 /* Functions.swift */; };
 		FE8C0A5E1EE12E54006C6118 /* AutoLayoutExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8C0A5C1EE12E54006C6118 /* AutoLayoutExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE8C0A6A1EE12E70006C6118 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0A661EE12E70006C6118 /* Extension.swift */; };
 		FE8C0A6B1EE12E70006C6118 /* NSLayoutConstraint.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0A671EE12E70006C6118 /* NSLayoutConstraint.extension.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE2ED0601F6A7B2E0036A620 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		FE8C0A591EE12E54006C6118 /* AutoLayoutExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLayoutExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE8C0A5C1EE12E54006C6118 /* AutoLayoutExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutExtension.h; sourceTree = "<group>"; };
 		FE8C0A5D1EE12E54006C6118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				FE8C0A671EE12E70006C6118 /* NSLayoutConstraint.extension.swift */,
 				FE8C0A681EE12E70006C6118 /* UIView.extension.swift */,
 				FEA8F06C1EE1797000FFEBA5 /* Array.extension.swift */,
+				FE2ED0601F6A7B2E0036A620 /* Functions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				FE8C0A6B1EE12E70006C6118 /* NSLayoutConstraint.extension.swift in Sources */,
 				FE8C0A6C1EE12E70006C6118 /* UIView.extension.swift in Sources */,
 				FEA8F06D1EE1797000FFEBA5 /* Array.extension.swift in Sources */,
+				FE2ED0611F6A7B2E0036A620 /* Functions.swift in Sources */,
 				FE8C0A6A1EE12E70006C6118 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
