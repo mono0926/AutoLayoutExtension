@@ -75,4 +75,12 @@ extension AutoLayoutExtension where Base: UIView {
             return base.layoutMarginsGuide
         }
     }
+
+    public func additionalOffsetForUnderIOS11(_ offset: CGFloat) -> CGFloat {
+        if #available(iOS 11.0, *) {
+            return 0
+        } else {
+            return offset
+        }
+    }
 }
