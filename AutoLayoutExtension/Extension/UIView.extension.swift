@@ -63,7 +63,7 @@ extension AutoLayoutExtension where Base: UIView {
         constraints.activate()
     }
 
-    private func addAutoLayoutedSubview(_ view: UIView) {
+    func addAutoLayoutedSubview(_ view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         base.addSubview(view)
     }
