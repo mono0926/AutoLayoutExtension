@@ -13,7 +13,7 @@ extension UIViewController: AutoLayoutExtensionCompatible { }
 extension AutoLayoutExtension where Base: UIViewController {
 
     @discardableResult
-    private func addFilledSubviewSafely(_ view: UIView, insets: UIEdgeInsets = .zero) -> FilledResult {
+    public func addFilledSubviewSafely(_ view: UIView, insets: UIEdgeInsets = .zero) -> FilledResult {
 
         base.view.ale.addAutoLayoutedSubview(view)
 
