@@ -73,6 +73,7 @@ class ViewController: UIViewController {
 
     }
 
+    @objc
     func moveRightDidTap(_ sender: UIButton) {
         let offset: CGFloat = 50
         viewFilledInnerConstrains.right.constant += offset
@@ -85,6 +86,8 @@ class ViewController: UIViewController {
             }
         }
     }
+
+    @objc
     func toggleActiveDidTap(_ sender: UIButton) {
         let target = viewFilledInnerConstrains.right
         target.isActive = !target.isActive
