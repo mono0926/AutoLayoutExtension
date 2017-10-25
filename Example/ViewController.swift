@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         labelFilled.text = "Filled:"
         view.ale.addAutoLayoutedSubview(labelFilled, constraints: [
             labelFilled.leftAnchor.constraint(equalTo: view.leftAnchor),
-            labelFilled.topAnchor.constraint(equalTo: view.topAnchor, constant: 20)
+            labelFilled.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
             ])
         viewFilledOuter.backgroundColor = .black
         view.ale.addAutoLayoutedSubview(viewFilledOuter, constraints: [
