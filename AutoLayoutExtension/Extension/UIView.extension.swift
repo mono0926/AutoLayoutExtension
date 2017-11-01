@@ -76,6 +76,14 @@ extension AutoLayoutExtension where Base: UIView {
             return UIViewLayoutGuideProxy(base)
         }
     }
+
+    public func insetsSafeOrDefault() -> UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return base.safeAreaInsets
+        } else {
+            return .zero
+        }
+    }
 }
 
 extension UIView {
