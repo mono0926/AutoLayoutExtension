@@ -53,7 +53,7 @@ extension AutoLayoutExtension where Base: UIView {
             height = view.heightAnchor.constraint(equalToConstant: size.height)
         }
 
-        [centerX, centerY, width, height].flatMap { $0 }.activate()
+        [centerX, centerY, width, height].compactMap { $0 }.activate()
 
         return (centerX: centerX, centerY: centerY, width: width, height: height)
     }
