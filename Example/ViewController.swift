@@ -11,8 +11,8 @@ import AutoLayoutExtension
 
 class ViewController: UIViewController {
     let labelFilled = UILabel()
-    let buttonFilled = UIButton(type: UIButtonType.system)
-    let buttonToggleActive = UIButton(type: UIButtonType.system)
+    let buttonFilled = UIButton(type: UIButton.ButtonType.system)
+    let buttonToggleActive = UIButton(type: UIButton.ButtonType.system)
     let viewFilledOuter = UIView()
     let viewFilledInner = UIView()
     var viewFilledInnerConstrains: FilledResult!
